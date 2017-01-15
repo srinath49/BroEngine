@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="EngineCode">
+      <UniqueIdentifier>{1d586c00-96e1-4094-97af-65d5b4559f21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCode\Profiler">
+      <UniqueIdentifier>{ad45786d-bd57-4cb6-8c80-1ca4f86f6974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCode\Timer">
+      <UniqueIdentifier>{6fce813e-2dfa-428f-83b6-0982e0965aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{535741d6-4314-45d0-9e1c-edf41d8bd64b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCode\Math">
+      <UniqueIdentifier>{0a688908-48dd-4cfe-9802-8a4b0298f598}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
