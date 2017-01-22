@@ -67,6 +67,18 @@ IntVector2 IntVector2::operator*(int scalarIntToMultiply) const
 	return returnVector;
 }
 
+void IntVector2::operator +=(const IntVector2& vectorToAdd)
+{
+	x += vectorToAdd.x;
+	y += vectorToAdd.y;
+}
+
+void IntVector2::operator -=(const IntVector2& vectorToSubtract)
+{
+	x -= vectorToSubtract.x;
+	y -= vectorToSubtract.y;
+}
+
 int IntVector2::DotProduct(const IntVector2& vectorToDotWIth) const
 {
 	int dotProduct;

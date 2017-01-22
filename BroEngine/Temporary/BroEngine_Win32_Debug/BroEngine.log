@@ -1,0 +1,11 @@
+﻿  BroEngine.cpp
+  IntVector2.cpp
+e:\projects\c++\broengine\broengine\enginecode\math\intvector2.cpp(92): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projects\c++\broengine\broengine\enginecode\math\intvector2.cpp(92): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\projects\c++\broengine\broengine\broengine.cpp(193): warning C4474: 'printf' : too many arguments passed for format string
+  e:\projects\c++\broengine\broengine\broengine.cpp(193): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+e:\projects\c++\broengine\broengine\broengine.cpp(195): warning C4474: 'printf' : too many arguments passed for format string
+  e:\projects\c++\broengine\broengine\broengine.cpp(195): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  BroEngine.vcxproj -> E:\Projects\C++\BroEngine\BroEngine\Temporary\BroEngine_Win32_Debug\BroEngine_Win32.exe
+  E:\Projects\C++\BroEngine\BroEngine\Temporary\BroEngine_Win32_Debug\BroEngine_Win32.exe
+  1 File(s) copied
