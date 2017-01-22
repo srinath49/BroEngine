@@ -25,5 +25,13 @@
     <ClCompile Include="BroEngine.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="EngineCode\Math\IntVector2.cpp">
+      <Filter>EngineCode\Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineCode\Math\IntVector2.hpp">
+      <Filter>EngineCode\Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

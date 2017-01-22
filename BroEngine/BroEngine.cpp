@@ -7,11 +7,14 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <corecrt_io.h>
+#include "EngineCode/Math/IntVector2.hpp"
 
 //-----------------------------------------------------------------------------------------------
 HWND g_hWnd = nullptr;
 HDC g_displayDeviceContext = nullptr;
 const char* APP_NAME = "Minimum Test App";
+bool g_runProgram = true;
+
 
 #ifndef UNUSED
 #define UNUSED (void)
@@ -20,7 +23,7 @@ const char* APP_NAME = "Minimum Test App";
 //--------Usually called WinProc , windows want to send message to you , it got to send through this function-----
 LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessageCode, WPARAM wParam, LPARAM lParam)
 {
-	//unsigned char asKey = (unsigned char) wParam;
+	unsigned char asKey = (unsigned char) wParam;
 	//DWORD value;
 	switch (wmMessageCode)
 	{
@@ -32,6 +35,11 @@ LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessa
 		break;
 
 	case WM_KEYDOWN:
+		if (asKey == VK_ESCAPE)
+		{
+			g_runProgram = false;
+		}
+		return 0;
 		break;
 
 	case WM_KEYUP:
@@ -50,6 +58,7 @@ LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessa
 		break;
 
 	case WM_QUIT:
+		g_runProgram = false;
 		break;
 	}
 
@@ -180,5 +189,14 @@ int WINAPI WinMain(HINSTANCE applicationInstanceHandle, HINSTANCE, LPSTR command
 	_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG)|_CRTDBG_LEAK_CHECK_DF);
 	StartWindowsConsole();
 	Initialize(applicationInstanceHandle);
+	IntVector2 vec2;
+	printf("%d, &d\n", vec2.x, vec2.y);
+	vec2 = vec2 + 4;
+	printf("%d, &d\n", vec2.x, vec2.y);
+	while (g_runProgram)
+	{
+		// Game Loop here
+	}
+	
 	return 0;
 }
