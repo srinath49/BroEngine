@@ -2,14 +2,17 @@
 
 #ifndef _INT_VECTOR_2_H
 #define _INT_VECTOR_2_H
+class FloatVector2;
 
 class IntVector2
 {
 public:
-	IntVector2(int xVal = 0 , int yVal = 0);
-	~IntVector2();
-
+	IntVector2();
+	IntVector2(int xVal , int yVal);
+	IntVector2(float xVal , float yVal);
 	IntVector2(const IntVector2& vectorToCopy);
+	IntVector2(const FloatVector2& vectorToCopy);
+	~IntVector2();
 
 	IntVector2 operator +(const IntVector2& vectorToAdd) const;
 	void operator += (const IntVector2& vectorToAdd);

@@ -1,17 +1,40 @@
 #include "FloatVector2.hpp"
+#include "IntVector2.hpp"
 #include <math.h>
 
-FloatVector2::FloatVector2(float xVal , float yVal)
+FloatVector2::FloatVector2()
+	: x(0.0f)
+	, y(0.0f)
 {
-	x = xVal;
-	y = yVal;
+
 }
 
-FloatVector2::FloatVector2(const FloatVector2& floatToCopy)
+FloatVector2::FloatVector2(float xVal , float yVal) 
+	: x(xVal)
+	, y(yVal)
 {
-	x = floatToCopy.x;
-	y = floatToCopy.y;
+	
 }
+
+FloatVector2::FloatVector2(int xVal, int yVal)
+	: x((float)xVal)
+	, y((float)yVal)
+{
+
+}
+
+FloatVector2::FloatVector2(const FloatVector2& floatVectorToCopy)
+{
+	x = floatVectorToCopy.x;
+	y = floatVectorToCopy.y;
+}
+
+FloatVector2::FloatVector2(const IntVector2& intVectorToCopy)
+{
+	x = (float)intVectorToCopy.x;
+	y = (float)intVectorToCopy.y;
+}
+
 
 FloatVector2::~FloatVector2()
 {

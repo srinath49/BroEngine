@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <corecrt_io.h>
 #include "EngineCode/Math/IntVector2.hpp"
+#include "EngineCode/Math/FloatVector2.hpp"
 
 #ifndef UNUSED
 #define UNUSED (void)
@@ -17,9 +18,13 @@
 int main()
 {
 	IntVector2 vec2;
-	printf("%d, &d\n", vec2.x, vec2.y);
+	FloatVector2* fvec2 = new FloatVector2(1 , 2);
+	printf("%f, %f\n", fvec2->x , fvec2->y);
+	printf("%d, %d\n", vec2.x, vec2.y);
 	vec2 = vec2 + 4;
-	printf("%d, &d\n", vec2.x, vec2.y);
+	printf("%d, %d\n", vec2.x, vec2.y);
+
+	//Test all your functions here
 	
 	getchar();
 	return 0;
