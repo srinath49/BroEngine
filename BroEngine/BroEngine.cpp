@@ -200,3 +200,18 @@ int WINAPI WinMain(HINSTANCE applicationInstanceHandle, HINSTANCE, LPSTR command
 	
 	return 0;
 }
+
+int main()
+{
+	//UNUSED(commandLineString);
+	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
+	//StartWindowsConsole();
+	//Initialize(applicationInstanceHandle);
+	IntVector2 vec2;
+	printf("%d, &d\n", vec2.x, vec2.y);
+	vec2 = vec2 + 4;
+	printf("%d, &d\n", vec2.x, vec2.y);
+	
+	getchar();
+	return 0;
+}
