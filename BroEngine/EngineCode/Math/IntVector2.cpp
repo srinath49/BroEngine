@@ -1,11 +1,26 @@
 #include "IntVector2.hpp"
+#include "FloatVector2.hpp"
 #include <math.h>
+
+IntVector2::IntVector2()
+	: x(0)
+	, y(0)
+{
+
+}
 
 IntVector2::IntVector2(int xVal, int yVal)
 	: x(xVal)
 	, y(yVal)
 {
 	
+}
+
+IntVector2::IntVector2(float xVal , float yVal)
+	: x((int)xVal)
+	, y((int)yVal)
+{
+
 }
 
 IntVector2::~IntVector2()
@@ -17,6 +32,12 @@ IntVector2::IntVector2(const IntVector2& vectorToCopy)
 {
 	x = vectorToCopy.x;
 	y = vectorToCopy.y;
+}
+
+IntVector2::IntVector2(const FloatVector2& vectorToCopy)
+{
+	x = (int)vectorToCopy.x;
+	y = (int)vectorToCopy.y;
 }
 
 IntVector2 IntVector2::operator+(const IntVector2& vectorToAdd) const
@@ -113,7 +134,7 @@ int IntVector2::DotProduct(const IntVector2& vectorToDotWIth) const
 int IntVector2::GetMagnitudeOfThisVector() const
 {
 	int magnitude;
-	magnitude = sqrtf((x*x + y*y));
+	magnitude = (int)sqrtf((float)(x*x + y*y));
 	return magnitude;
 }
 
