@@ -6,7 +6,7 @@
 class IntVector2
 {
 public:
-	IntVector2(int xVal = 0, int yVal = 0);
+	IntVector2(int xVal = 0 , int yVal = 0);
 	~IntVector2();
 
 	IntVector2(const IntVector2& vectorToCopy);
@@ -16,6 +16,10 @@ public:
 	void operator -= (const IntVector2& vectorToSubtract);
 	IntVector2 operator -(const IntVector2& vectorToSubtract) const;
 	IntVector2 operator +(int scalarIntToAdd) const;
+	void operator +=(int scalarIntToAdd);
+	void operator -=(int scalarIntToSubtract);
+	void operator *=(int scalarIntToMultiply);
+	void operator /=(int scalarIntToDivide);
 	IntVector2 operator -(int scalarIntToSubtract) const;
 	IntVector2 operator *(int scalarIntToMultiply) const;
 	IntVector2 operator /(int scalarIntToDivide) const;
@@ -23,15 +27,8 @@ public:
 	int DotProduct(const IntVector2& vectorToDotWIth) const;
 
 	/*
-	operator	+= scalar
-	operator	-= scalar
-	operator	*= scalar
-	operator	/= scalar
-
 	CrossProduct Returning new Vector
 	CrossProduct modifying this vector
-
-	Google how to do Scalar WIP
 	*/
 
 	int				GetMagnitudeOfThisVector() const;
