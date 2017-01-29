@@ -73,6 +73,30 @@ void IntVector2::operator +=(const IntVector2& vectorToAdd)
 	y += vectorToAdd.y;
 }
 
+void IntVector2::operator+=(int scalarIntToAdd)
+{
+	x += scalarIntToAdd;
+	y += scalarIntToAdd;
+}
+
+void IntVector2::operator-=(int scalarIntToSubtract)
+{
+	x -= scalarIntToSubtract;
+	y -= scalarIntToSubtract;
+}
+
+void IntVector2::operator*=(int scalarIntToMultiply)
+{
+	x *= scalarIntToMultiply;
+	y *= scalarIntToMultiply;
+}
+
+void IntVector2::operator/=(int scalarIntToDivide)
+{
+	x /= scalarIntToDivide;
+	y /= scalarIntToDivide;
+}
+
 void IntVector2::operator -=(const IntVector2& vectorToSubtract)
 {
 	x -= vectorToSubtract.x;

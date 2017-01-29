@@ -280,9 +280,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BroEngine.cpp" />
+    <ClCompile Include="EngineCode\Math\FloatVector2.cpp" />
     <ClCompile Include="EngineCode\Math\IntVector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EngineCode\Math\FloatVector2.hpp" />
     <ClInclude Include="EngineCode\Math\IntVector2.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
