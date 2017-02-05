@@ -3,6 +3,7 @@
 *.lo
 *.o
 *.obj
+*.suo
 
 # Precompiled Headers
 *.gch
@@ -27,4 +28,6 @@
 *.exe
 *.out
 *.app
-BroEngine/ipch/BROENGINE-6203888a/BROENGINE-b90f2205.ipch
+BroEngine/ipch/*
+BroEngine/Build/*
+BroEngine/Temporary/*
