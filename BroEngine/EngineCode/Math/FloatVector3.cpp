@@ -26,6 +26,11 @@ FloatVector3::FloatVector3(float xVal, float yVal, float zVal)
 
 };
 
+FloatVector3::~FloatVector3()
+{
+
+}
+
 FloatVector3::FloatVector3(const FloatVector3& vectorToCopy)
 {
 	x = vectorToCopy.x;
