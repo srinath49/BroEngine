@@ -28,6 +28,8 @@
 *.exe
 *.out
 *.app
+
+# Folders
 BroEngine/ipch/*
-BroEngine/Build/*
 BroEngine/Temporary/*
+BroEngine/Builds/*
