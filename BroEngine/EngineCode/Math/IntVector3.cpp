@@ -1,3 +1,4 @@
+#include "FloatVector3.hpp";
 #include "IntVector3.hpp";
 #include <math.h>
 
@@ -37,12 +38,12 @@ IntVector3::IntVector3(const IntVector3& vectorToCopy)
 	z = vectorToCopy.z;
 }
 
-//IntVector3::IntVector3(const FloatVector3& vectorToCopy) //After FloatVector3.hpp created
-//{
-//	x = (int)vectorToCopy.x;
-//	y = (int)vectorToCopy.y;
-//	z = (int)vectorToCopy.z;
-//}
+IntVector3::IntVector3(const FloatVector3& vectorToCopy) //After FloatVector3.hpp created
+{
+	x = (int)vectorToCopy.x;
+	y = (int)vectorToCopy.y;
+	z = (int)vectorToCopy.z;
+}
 
 IntVector3 IntVector3::operator +(const IntVector3& intVector3ToAdd) const
 {

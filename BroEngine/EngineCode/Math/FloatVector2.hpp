@@ -29,6 +29,8 @@ class FloatVector2
 		void operator *=(float floatScalarToMultiply);
 		void operator /=(float floatScalarToDivide);
 
+		float DotProduct(const FloatVector2& vectorToDoWith) const;
+
 	public:
 
 		float x;
