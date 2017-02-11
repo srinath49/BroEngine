@@ -160,3 +160,12 @@ void IntVector3::operator/=(int scalarToDivide)
 	y = y / scalarToDivide;
 	z = z / scalarToDivide;
 }
+
+int IntVector3::DotProduct(const IntVector3& vectorAToDoWith, const IntVector3& vectorBToDoWith, const IntVector3& vectorCToDoWith) const
+{
+	int result;
+
+	result = (vectorAToDoWith.x * vectorBToDoWith.x * vectorCToDoWith.x) + (vectorAToDoWith.y * vectorBToDoWith.y * vectorCToDoWith.y) + (vectorAToDoWith.z * vectorBToDoWith.z * vectorCToDoWith.z);
+
+	return result;
+}

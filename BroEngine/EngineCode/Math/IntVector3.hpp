@@ -27,6 +27,8 @@ class IntVector3
 		void operator -= (int scalarToSubtract);
 		void operator *= (int scalarToMultiply);
 		void operator /= (int scalarToDivide);
+
+		int DotProduct(const IntVector3& vectorAToDoWith , const IntVector3& vectorBToDoWith , const IntVector3& vectorCToDoWith) const;
 		
 
 	public:
