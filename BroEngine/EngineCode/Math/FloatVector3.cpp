@@ -67,7 +67,7 @@ FloatVector3 FloatVector3::operator-(const FloatVector3& vectorToSubtract) const
 	return returnVector3;
 }
 
-FloatVector3 FloatVector3::operator+(int scalarToAdd) const
+FloatVector3 FloatVector3::operator+(float scalarToAdd) const
 {
 	FloatVector3 returnVector3;
 
@@ -78,35 +78,83 @@ FloatVector3 FloatVector3::operator+(int scalarToAdd) const
 	return returnVector3;
 }
 
-FloatVector3 FloatVector3::operator-(int scalarToSubtract) const
+FloatVector3 FloatVector3::operator-(float scalarToSubtract) const
 {
 	FloatVector3 returnVector3;
 
+	returnVector3.x = x - scalarToSubtract;
 	returnVector3.y = y - scalarToSubtract;
 	returnVector3.z = z - scalarToSubtract;
-	returnVector3.x = x - scalarToSubtract;
 
 	return returnVector3;
 }
 
-FloatVector3 FloatVector3::operator*(int scalarToMultiply) const
+FloatVector3 FloatVector3::operator*(float scalarToMultiply) const
 {
 	FloatVector3 returnVector3;
 
+	returnVector3.x = x * scalarToMultiply;
 	returnVector3.y = y * scalarToMultiply;
 	returnVector3.z = z * scalarToMultiply;
-	returnVector3.x = x * scalarToMultiply;
 
 	return returnVector3;
 }
 
-FloatVector3 FloatVector3::operator/(int scalarToDivide) const
+FloatVector3 FloatVector3::operator/(float scalarToDivide) const
 {
 	FloatVector3 returnVector3;
 
+	returnVector3.x = x / scalarToDivide;
 	returnVector3.y = y / scalarToDivide;
 	returnVector3.z = z / scalarToDivide;
-	returnVector3.x = x / scalarToDivide;
 
 	return returnVector3;
+}
+
+void FloatVector3::operator+=(float scalarToAdd)
+{
+	x = x + scalarToAdd;
+	y = y + scalarToAdd;
+	z = z + scalarToAdd;
+}
+
+void FloatVector3::operator-=(float scalarToSubtract)
+{
+	x = x - scalarToSubtract;
+	y = y - scalarToSubtract;
+	z = z - scalarToSubtract;
+}
+
+void FloatVector3::operator*=(float scalarToMultiply)
+{
+	x = x * scalarToMultiply;
+	y = y * scalarToMultiply;
+	z = z * scalarToMultiply;
+}
+
+void FloatVector3::operator/=(float scalarToDivide)
+{
+	x = x / scalarToDivide;
+	y = y / scalarToDivide;
+	z = z / scalarToDivide;
+}
+
+float FloatVector3::DotProduct(const FloatVector3& vectorToDoWith) const
+{
+	float scalarResult;
+
+	scalarResult = (x * vectorToDoWith.x) + (y * vectorToDoWith.y) + (z * vectorToDoWith.z);
+
+	return scalarResult;
+}
+
+FloatVector3 FloatVector3::CrossProduct(const FloatVector3 & vectorToDoWith) const
+{
+	FloatVector3 resultVector;
+
+	resultVector.x = y * vectorToDoWith.z - z * vectorToDoWith.y;
+	resultVector.y = z * vectorToDoWith.x - x * vectorToDoWith.z;
+	resultVector.z = x * vectorToDoWith.y - y * vectorToDoWith.x;
+
+	return resultVector;
 }

@@ -19,15 +19,19 @@ public:
 	FloatVector3 operator+(const FloatVector3& vectorToAdd) const;
 	FloatVector3 operator-(const FloatVector3& vectorToSubtract) const;
 
-	FloatVector3 operator+(int scalarToAdd) const;
-	FloatVector3 operator-(int scalarToSubtract) const;
-	FloatVector3 operator*(int scalarToMultiply) const;
-	FloatVector3 operator/(int scalarToDivide) const;
+	FloatVector3 operator+(float scalarToAdd) const;
+	FloatVector3 operator-(float scalarToSubtract) const;
+	FloatVector3 operator*(float scalarToMultiply) const;
+	FloatVector3 operator/(float scalarToDivide) const;
 
-	void operator+=(int scalarToAdd);
-	void operator-=(int scalarToSubtract);
-	void operator*=(int scalarToMultiply);
-	void operator/=(int scalarToDivide);
+	void operator+=(float scalarToAdd);
+	void operator-=(float scalarToSubtract);
+	void operator*=(float scalarToMultiply);
+	void operator/=(float scalarToDivide);
+
+	float DotProduct(const FloatVector3& vectorToDoWith) const;
+
+	FloatVector3 CrossProduct(const FloatVector3& vectorToDoWith) const;
 
 	public:
 		float x;

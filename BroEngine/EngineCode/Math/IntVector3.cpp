@@ -161,11 +161,22 @@ void IntVector3::operator/=(int scalarToDivide)
 	z = z / scalarToDivide;
 }
 
-int IntVector3::DotProduct(const IntVector3& vectorAToDoWith, const IntVector3& vectorBToDoWith, const IntVector3& vectorCToDoWith) const
+int IntVector3::DotProduct(const IntVector3& vectorToDoWith) const
 {
 	int result;
 
-	result = (vectorAToDoWith.x * vectorBToDoWith.x * vectorCToDoWith.x) + (vectorAToDoWith.y * vectorBToDoWith.y * vectorCToDoWith.y) + (vectorAToDoWith.z * vectorBToDoWith.z * vectorCToDoWith.z);
+	result = (x * vectorToDoWith.x) + (y * vectorToDoWith.y) + (z * vectorToDoWith.z);
 
 	return result;
+}
+
+IntVector3 IntVector3::CrossProduct(const IntVector3& vectorToDoWith) const
+{
+	IntVector3 resultVector;
+
+	resultVector.x = y * vectorToDoWith.z - z * vectorToDoWith.y;
+	resultVector.y = z * vectorToDoWith.x - x * vectorToDoWith.z;
+	resultVector.z = x * vectorToDoWith.y - y * vectorToDoWith.x;
+
+	return resultVector;
 }

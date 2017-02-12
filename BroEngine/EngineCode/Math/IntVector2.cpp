@@ -124,10 +124,10 @@ void IntVector2::operator -=(const IntVector2& vectorToSubtract)
 	y -= vectorToSubtract.y;
 }
 
-int IntVector2::DotProduct(const IntVector2& vectorAToDotWIth , const IntVector2& vectorBToDotWIth) const
+int IntVector2::DotProduct(const IntVector2& vectorToDotWIth) const
 {
 	int result;
-	result = (vectorAToDotWIth.x * vectorBToDotWIth.x) + (vectorAToDotWIth.y * vectorBToDotWIth.y);
+	result = (x * vectorToDotWIth.x) + (y * vectorToDotWIth.y);
 	return result;
 }
 

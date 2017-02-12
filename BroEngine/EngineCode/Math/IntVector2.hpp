@@ -27,7 +27,7 @@ public:
 	IntVector2 operator *(int scalarIntToMultiply) const;
 	IntVector2 operator /(int scalarIntToDivide) const;
 
-	int DotProduct(const IntVector2& vectorAToDotWIth , const IntVector2& vectorBToDotWIth) const;
+	int DotProduct(const IntVector2& vectorAToDotWIth) const;
 
 	/*
 	CrossProduct Returning new Vector
