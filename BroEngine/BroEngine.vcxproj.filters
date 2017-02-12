@@ -11,12 +11,6 @@
     <Filter Include="EngineCode\Math">
       <UniqueIdentifier>{5eb4a917-73d3-4f36-a769-4b157a8bf285}</UniqueIdentifier>
     </Filter>
-    <Filter Include="EngineCode\Timer">
-      <UniqueIdentifier>{f0b0d8a9-af06-4749-85a0-c2af3c306d55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EngineCode\Profiler">
-      <UniqueIdentifier>{02f79766-a1aa-411a-8ec0-7f26a1ec61fc}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
