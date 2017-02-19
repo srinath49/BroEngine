@@ -15,6 +15,7 @@ class Win32OpenGLApp : public BaseApp
 public:
 	Win32OpenGLApp();
 	~Win32OpenGLApp();
+	static void key_callback(GLFWwindow* window , int key , int scancode , int action , int mods);
 
 protected:
 	virtual void Initialize();
