@@ -33,3 +33,7 @@
 BroEngine/ipch/*
 BroEngine/Temporary/*
 BroEngine/Builds/*
+
+BroEngine/ipch
+BroEngine/Temporary
+BroEngine/Builds
