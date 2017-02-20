@@ -39,7 +39,7 @@ void Win32OpenGLApp::InitializeWindow()
 {
 	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 	m_window = glfwCreateWindow(800, 600, "Bob Window", nullptr, nullptr);
-	//glfwSetKeyCallback(m_window , key_callback);
+	glfwSetKeyCallback(m_window , key_callback);
 }
 
 //---------------------------------------------------------------------------------------------------
