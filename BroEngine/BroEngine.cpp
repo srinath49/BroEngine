@@ -1,3 +1,5 @@
+#define WIN32_LEAN_AND_MEAN
+#include "Windows.h"
 #include <stdio.h>
 #include <stdexcept>
 #include <iostream>
@@ -8,12 +10,12 @@
 #define UNUSED (void)
 #endif // !UNUSED
 
-
 //---------------------------------------------------------------------------------------------------
-int main()
+int WINAPI WinMain(HINSTANCE applicationInstanceHandle, HINSTANCE, LPSTR, int )
 {
 	int returnValue = EXIT_SUCCESS;
-	BaseApp* app = new Win32OpenGLApp();
+	BaseApp* app = new Win32OpenGLApp(applicationInstanceHandle);
+	
 	try
 	{
 		app->Run();

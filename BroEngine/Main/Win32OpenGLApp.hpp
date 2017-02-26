@@ -7,26 +7,22 @@
 #include "BaseApp.hpp"
 
 //---------------------------------------------------------------------------------------------------
-class GLFWwindow;
+class BaseWindow;
 
 //---------------------------------------------------------------------------------------------------
 class Win32OpenGLApp : public BaseApp
 {
 public:
-	Win32OpenGLApp();
+	Win32OpenGLApp(void* applicationInstance);
 	~Win32OpenGLApp();
-	static void key_callback(GLFWwindow* window , int key , int scancode , int action , int mods);
+	virtual void Initialize();
 
 protected:
-	virtual void Initialize();
 	virtual void Unitialize();
-	virtual void MainLoop();
+	//virtual void MainLoop();
 
 private:
 	void InitializeWindow();
 	void UninitializeWindow();
-
-private:
-	GLFWwindow*		m_window;
-};
+};	
 #endif // !_WIN32_OPENGL_APP_H_

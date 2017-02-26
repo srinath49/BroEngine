@@ -1,47 +1,44 @@
-#include "BaseApp.hpp"
-#include "EngineCode/Window/BaseWindow.hpp"
+#include "BaseWindow.hpp"
+#include "Main/BaseApp.hpp"
+
+BaseApp* BaseWindow::s_app = nullptr;
 
 //---------------------------------------------------------------------------------------------------
-BaseApp::BaseApp(void* applicationHandle)
-	: m_applicationInstance(applicationHandle)
-	, m_window(nullptr)
+BaseWindow::BaseWindow(void* applicationInstance, BaseApp* app) 
+	: m_applicationInstance(applicationInstance)
 {
-	
-}
-
-//---------------------------------------------------------------------------------------------------
-BaseApp::~BaseApp()
-{
-	delete m_window;
-}
-
-void BaseApp::Run()
-{
-	Initialize();
-	MainLoop();
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseApp::Initialize()
-{
-
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseApp::Unitialize()
-{
-
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseApp::MainLoop()
-{
-	while (m_isRunning && m_window)
+	if (!s_app)
 	{
-		m_window->Update();
-		// Update InputSystem
-		// Update EventSystem
-		// Update Game
-		m_window->SwapWindowBuffers();
+		s_app = app;
 	}
+}
+
+//---------------------------------------------------------------------------------------------------
+BaseWindow::~BaseWindow()
+{
+
+}
+
+//---------------------------------------------------------------------------------------------------
+void BaseWindow::Initialize()
+{
+
+}
+
+//---------------------------------------------------------------------------------------------------
+void BaseWindow::Uninitialize()
+{
+
+}
+
+//---------------------------------------------------------------------------------------------------
+void BaseWindow::Update()
+{
+
+}
+
+//---------------------------------------------------------------------------------------------------
+void BaseWindow::SwapWindowBuffers()
+{
+
 }
