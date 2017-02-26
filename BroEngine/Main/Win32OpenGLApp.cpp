@@ -1,6 +1,7 @@
 #include "Win32OpenGLApp.hpp"
 #include <stdio.h>
 #include "EngineCode/Window/Win32Window.hpp"
+#include "EngineCode/Input/InputSystem.hpp"
 
 //---------------------------------------------------------------------------------------------------
 Win32OpenGLApp::Win32OpenGLApp(void* applicationInstance)
@@ -18,6 +19,7 @@ Win32OpenGLApp::~Win32OpenGLApp()
 //---------------------------------------------------------------------------------------------------
 void Win32OpenGLApp::Initialize()
 {
+	m_inputSystem = InputSystem::GetInputSystem();
 	InitializeWindow();
 }
 

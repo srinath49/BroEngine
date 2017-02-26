@@ -14,6 +14,9 @@
     <Filter Include="EngineCode\Window">
       <UniqueIdentifier>{6e2eef73-b0a1-415b-bb9e-16de01bedee3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EngineCode\Input">
+      <UniqueIdentifier>{850eccef-028d-4d6a-9a2d-12aacd02369a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -46,6 +49,9 @@
     <ClCompile Include="EngineCode\Window\Win32Window.cpp">
       <Filter>EngineCode\Window</Filter>
     </ClCompile>
+    <ClCompile Include="EngineCode\Input\InputSystem.cpp">
+      <Filter>EngineCode\Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineCode\Math\IntVector2.hpp">
@@ -71,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="EngineCode\Window\Win32Window.hpp">
       <Filter>EngineCode\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCode\Input\InputSystem.hpp">
+      <Filter>EngineCode\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

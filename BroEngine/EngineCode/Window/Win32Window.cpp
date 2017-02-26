@@ -1,11 +1,12 @@
 #include "Win32Window.hpp"
 #include <gl\GL.h>
 #include "Main\BaseApp.hpp"
+#include "EngineCode\Input\InputSystem.hpp"
 
 //-----------------------------------------------------------------------------------------------
 LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessageCode, WPARAM wParam, LPARAM lParam)
 {
-	//unsigned char asKey = (unsigned char)wParam;
+	unsigned char asKey = (unsigned char)wParam;
 	switch (wmMessageCode)
 	{
 		case WM_CLOSE:
@@ -17,6 +18,16 @@ LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessa
 			}
 			break;
 		case WM_KEYDOWN:
+			if (InputSystem::s_instance)
+			{
+				InputSystem::s_instance->KeyDown(asKey);
+			}
+			break;
+		case WM_KEYUP:
+			if (InputSystem::s_instance)
+			{
+				InputSystem::s_instance->KeyUp(asKey);
+			}
 			break;
 	}
 

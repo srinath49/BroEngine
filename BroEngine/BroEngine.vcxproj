@@ -292,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BroEngine.cpp" />
+    <ClCompile Include="EngineCode\Input\InputSystem.cpp" />
     <ClCompile Include="EngineCode\Math\FloatVector2.cpp" />
     <ClCompile Include="EngineCode\Math\FloatVector3.cpp" />
     <ClCompile Include="EngineCode\Math\IntVector2.cpp" />
@@ -302,6 +303,7 @@
     <ClCompile Include="Main\Win32OpenGLApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EngineCode\Input\InputSystem.hpp" />
     <ClInclude Include="EngineCode\Math\FloatVector2.hpp" />
     <ClInclude Include="EngineCode\Math\FloatVector3.hpp" />
     <ClInclude Include="EngineCode\Math\IntVector2.hpp" />

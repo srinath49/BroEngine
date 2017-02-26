@@ -5,6 +5,7 @@
 
 //---------------------------------------------------------------------------------------------------
 class BaseWindow;
+class InputSystem;
 
 //---------------------------------------------------------------------------------------------------
 class BaseApp
@@ -25,5 +26,6 @@ public:
 protected:
 	void*			m_applicationInstance;
 	BaseWindow*		m_window;
+	InputSystem*	m_inputSystem;
 };
 #endif // !_BASE_APP_H_
