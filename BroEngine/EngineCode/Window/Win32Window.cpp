@@ -72,9 +72,9 @@ void Win32Window::Initialize()
 	HWND desktopWindowHandle = GetDesktopWindow();
 	GetClientRect(desktopWindowHandle, &desktopRect);
 	float offset = 25.0f;
-	float width  = 1600;
-	float height = 900;
-	RECT windowRect = { 0, offset, width, height + offset };
+	float width  = 1080;
+	float height = 800;
+	RECT windowRect = { offset, offset, width - offset, height - offset };
 	AdjustWindowRectEx(&windowRect, windowStyleFlags, FALSE, windowStyleExFlags);
 
 	WCHAR windowTitle[1024];
@@ -134,6 +134,13 @@ void Win32Window::Update()
 	RunMessagePump();
 	glClearColor(0.f, 0.f, 0.f, 1.f);
 	glClear(GL_COLOR_BUFFER_BIT);
+	glPushMatrix();
+		glBegin(GL_LINES);
+		glVertex2d(50.0, 150.0);
+		//glColor3f(1.f, 1.f, 1.f);
+		glVertex2d(250.0, 250);
+		glEnd();
+	glPopMatrix();
 }
 
 //---------------------------------------------------------------------------------------------------
