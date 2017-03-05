@@ -16,7 +16,7 @@ public:
 
 	virtual void Initialize();
 	virtual void Uninitialize();
-	virtual void Update();
+	virtual void Update(float deltaTime);
 	virtual void SwapWindowBuffers();
 public:
 	bool				m_isRunning;

@@ -1,44 +1,52 @@
-#include "BaseWindow.hpp"
-#include "Main/BaseApp.hpp"
+#include "Game.hpp"
 
-BaseApp* BaseWindow::s_app = nullptr;
 
 //---------------------------------------------------------------------------------------------------
-BaseWindow::BaseWindow(void* applicationInstance, BaseApp* app) 
-	: m_applicationInstance(applicationInstance)
+Game::Game()
 {
-	if (!s_app)
+
+}
+
+//---------------------------------------------------------------------------------------------------
+Game::~Game()
+{
+
+}
+
+//---------------------------------------------------------------------------------------------------
+void Game::Initialize()
+{
+	InitializeWorld();
+}
+
+//---------------------------------------------------------------------------------------------------
+void Game::Update(float deltaTime)
+{
+	if (player)
 	{
-		s_app = app;
+		//player->Update(deltaTime);
+	}
+	for (std::vector<GameObject*>::iterator asteroidsIterator = asteroids.begin(); asteroidsIterator != asteroids.end(); ++asteroidsIterator)
+	{
+		//asteroidsIterator->Update(deltaTime);
 	}
 }
 
 //---------------------------------------------------------------------------------------------------
-BaseWindow::~BaseWindow()
+void Game::Render()
 {
-
+	if (player)
+	{
+		//player->Render();
+	}
+	for (std::vector<GameObject*>::iterator asteroidsIterator = asteroids.begin(); asteroidsIterator != asteroids.end(); ++asteroidsIterator)
+	{
+		//asteroidsIterator->Render();
+	}
 }
 
 //---------------------------------------------------------------------------------------------------
-void BaseWindow::Initialize()
+void Game::InitializeWorld()
 {
-
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseWindow::Uninitialize()
-{
-
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseWindow::Update(float deltaTime)
-{
-
-}
-
-//---------------------------------------------------------------------------------------------------
-void BaseWindow::SwapWindowBuffers()
-{
-
+	
 }

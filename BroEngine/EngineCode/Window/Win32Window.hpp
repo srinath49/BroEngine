@@ -18,10 +18,10 @@ public:
 	Win32Window(void* applicationHandle, BaseApp* app);
 	virtual ~Win32Window();
 
-	virtual void Initialize();
-	virtual void Uninitialize();
-	virtual void Update();
-	virtual void SwapWindowBuffers();
+	virtual void Initialize() override;
+	virtual void Uninitialize() override;
+	virtual void Update(float deltaTime) override;
+	virtual void SwapWindowBuffers() override;
 
 private:
 	void RunMessagePump();

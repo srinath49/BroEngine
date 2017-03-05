@@ -17,6 +17,12 @@
     <Filter Include="EngineCode\Input">
       <UniqueIdentifier>{850eccef-028d-4d6a-9a2d-12aacd02369a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EngineCode\Time">
+      <UniqueIdentifier>{c3565f64-81cd-43f1-a4c2-39efeb832683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameCode">
+      <UniqueIdentifier>{cc060943-1915-4dc0-a737-0248c82e91c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -52,6 +58,12 @@
     <ClCompile Include="EngineCode\Input\InputSystem.cpp">
       <Filter>EngineCode\Input</Filter>
     </ClCompile>
+    <ClCompile Include="EngineCode\Time\Time.cpp">
+      <Filter>EngineCode\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCode\Game.cpp">
+      <Filter>GameCode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineCode\Math\IntVector2.hpp">
@@ -80,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="EngineCode\Input\InputSystem.hpp">
       <Filter>EngineCode\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCode\Time\Time.hpp">
+      <Filter>EngineCode\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCode\Game.hpp">
+      <Filter>GameCode</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

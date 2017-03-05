@@ -27,5 +27,9 @@ protected:
 	void*			m_applicationInstance;
 	BaseWindow*		m_window;
 	InputSystem*	m_inputSystem;
+	float			m_deltaTime;
+	float			m_timePreviousFrame;
+	float			m_timeThisFrame;
+	float			m_frameTime;
 };
 #endif // !_BASE_APP_H_

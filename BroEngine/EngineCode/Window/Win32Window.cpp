@@ -2,6 +2,7 @@
 #include <gl\GL.h>
 #include "Main\BaseApp.hpp"
 #include "EngineCode\Input\InputSystem.hpp"
+#include "EngineCode\Math\FloatVector3.hpp"
 
 //-----------------------------------------------------------------------------------------------
 LRESULT CALLBACK WindowsMessageHandlingProcedure(HWND windowHandle, UINT wmMessageCode, WPARAM wParam, LPARAM lParam)
@@ -129,18 +130,38 @@ void Win32Window::Uninitialize()
 }
 
 //---------------------------------------------------------------------------------------------------
-void Win32Window::Update()
+void Win32Window::Update(float deltaTime)
 {
 	RunMessagePump();
 	glClearColor(0.f, 0.f, 0.f, 1.f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glPushMatrix();
-		glBegin(GL_LINES);
-		glVertex2d(50.0, 150.0);
-		//glColor3f(1.f, 1.f, 1.f);
-		glVertex2d(250.0, 250);
-		glEnd();
-	glPopMatrix();
+// 	glPushMatrix();
+// 		glBegin(GL_LINES);
+// 			glVertex2d(50.0, 150.0);
+// 			glColor3f(1.f, 0.f, 0.f);
+// 		
+// 			glVertex2d(250.0, 250);
+// 			glColor3f(0.f, 1.f, 0.f);
+// 
+// 			glVertex2d(50.0, 250);
+// 			glColor3f(0.f, 0.f, 1.f);
+// 
+// 			glVertex2d(50.0, 50);
+// 			glColor3f(0.f, 1.f, 0.f);
+// 		glEnd();
+// 		
+// 		glPushMatrix();
+// 		glTranslatef(100, 200, 0);
+// 		glBegin(GL_TRIANGLES);
+// 			glColor3f(1.f, 0.f, 0.f);
+// 			glVertex2d(0, 0);
+// 			glColor3f(0.f, 1.f, 0.f);
+// 			glVertex2d(100, 0);
+// 			glColor3f(0.f, 0.f, 1.f);
+// 			glVertex2d(50, 100);
+// 		glEnd();
+// 		glPopMatrix();
+// 	glPopMatrix();
 }
 
 //---------------------------------------------------------------------------------------------------

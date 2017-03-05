@@ -297,8 +297,10 @@
     <ClCompile Include="EngineCode\Math\FloatVector3.cpp" />
     <ClCompile Include="EngineCode\Math\IntVector2.cpp" />
     <ClCompile Include="EngineCode\Math\IntVector3.cpp" />
+    <ClCompile Include="EngineCode\Time\Time.cpp" />
     <ClCompile Include="EngineCode\Window\BaseWindow.cpp" />
     <ClCompile Include="EngineCode\Window\Win32Window.cpp" />
+    <ClCompile Include="GameCode\Game.cpp" />
     <ClCompile Include="Main\BaseApp.cpp" />
     <ClCompile Include="Main\Win32OpenGLApp.cpp" />
   </ItemGroup>
@@ -308,8 +310,10 @@
     <ClInclude Include="EngineCode\Math\FloatVector3.hpp" />
     <ClInclude Include="EngineCode\Math\IntVector2.hpp" />
     <ClInclude Include="EngineCode\Math\IntVector3.hpp" />
+    <ClInclude Include="EngineCode\Time\Time.hpp" />
     <ClInclude Include="EngineCode\Window\BaseWindow.hpp" />
     <ClInclude Include="EngineCode\Window\Win32Window.hpp" />
+    <ClInclude Include="GameCode\Game.hpp" />
     <ClInclude Include="Main\BaseApp.hpp" />
     <ClInclude Include="Main\Win32OpenGLApp.hpp" />
   </ItemGroup>
