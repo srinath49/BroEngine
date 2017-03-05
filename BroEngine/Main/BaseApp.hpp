@@ -5,6 +5,7 @@
 
 //---------------------------------------------------------------------------------------------------
 class BaseWindow;
+class Game;
 class InputSystem;
 
 //---------------------------------------------------------------------------------------------------
@@ -26,6 +27,7 @@ public:
 protected:
 	void*			m_applicationInstance;
 	BaseWindow*		m_window;
+	Game*			m_game;
 	InputSystem*	m_inputSystem;
 	float			m_deltaTime;
 	float			m_timePreviousFrame;

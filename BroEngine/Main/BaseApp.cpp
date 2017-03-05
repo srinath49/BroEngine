@@ -2,6 +2,7 @@
 #include "EngineCode/Window/BaseWindow.hpp"
 #include "EngineCode/Input/InputSystem.hpp"
 #include "EngineCode/Time/Time.hpp"
+#include "GameCode/Game.hpp"
 
 //---------------------------------------------------------------------------------------------------
 BaseApp::BaseApp(void* applicationHandle)
@@ -12,6 +13,7 @@ BaseApp::BaseApp(void* applicationHandle)
 	, m_timePreviousFrame()
 	, m_timeThisFrame()
 	, m_frameTime(1.0f/60.0f)
+	, m_game()
 {
 	
 }
@@ -31,7 +33,7 @@ void BaseApp::Run()
 //---------------------------------------------------------------------------------------------------
 void BaseApp::Initialize()
 {
-
+	
 }
 
 //---------------------------------------------------------------------------------------------------
